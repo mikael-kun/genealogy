@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research — A Family Archive</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ─── Research table styles ───────────────────────────── */
+
+    .archive-table-wrap {
+      overflow-x: auto;
+      margin-top: 2rem;
+    }
+
+    .archive-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+      font-size: 0.98rem;
+      background: rgba(255,255,255,0.18);
+      backdrop-filter: blur(1px);
+    }
+
+    .archive-table thead th {
+      font-family: var(--serif-display);
+      font-weight: 500;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+      color: var(--ink-soft);
+      text-align: left;
+      padding: 1rem 1rem 0.9rem;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .archive-table tbody tr {
+      transition: background 0.2s ease;
+    }
+
+    .archive-table tbody tr:hover {
+      background: rgba(153, 51, 35, 0.035);
+    }
+
+    .archive-table td {
+      padding: 1rem;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(199, 189, 166, 0.45);
+      line-height: 1.55;
+    }
+
+    .archive-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .archive-table td:first-child {
+      width: 28%;
+      font-family: var(--serif-display);
+      font-size: 1.02rem;
+      color: var(--ink-soft);
+    }
+
+    .archive-table td:last-child {
+      width: 72%;
+    }
+
+    .archive-table ul {
+      margin-top: 0.5rem;
+      padding-left: 1.2rem;
+    }
+
+    .archive-table li {
+      margin-bottom: 0.35rem;
+    }
+
+    .source-title {
+      font-family: var(--serif-jp);
+      font-size: 1.05rem;
+      color: var(--ink);
+    }
+
+    .source-sub {
+      display: block;
+      margin-top: 0.25rem;
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--ink-mute);
+    }
+
+    @media (max-width: 700px) {
+
+      .archive-table,
+      .archive-table thead,
+      .archive-table tbody,
+      .archive-table th,
+      .archive-table td,
+      .archive-table tr {
+        display: block;
+      }
+
+      .archive-table thead {
+        display: none;
+      }
+
+      .archive-table tr {
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid var(--hairline);
+      }
+
+      .archive-table td {
+        width: 100% !important;
+        border-bottom: none;
+        padding: 0.6rem 0;
+      }
+
+      .archive-table td:first-child {
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ─── Masthead ───────────────────────────────────────── -->
+
+  <header class="masthead">
+    <div class="masthead__title">
+      <a href="index.html">Kawamura · Uratani · Hänninen</a>
+    </div>
+
+    <nav class="masthead__nav">
+      <a href="index.html">Home</a>
+      <a href="kawamura.html">Kawamura</a>
+      <a href="uratani.html">Uratani</a>
+      <a href="hanninen.html">Hänninen</a>
+      <a href="places.html">Places</a>
+      <a href="research.html" aria-current="page">Research</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <!-- ─── Main Page ─────────────────────────────────────── -->
+
+  <main class="page page--wide">
+
+    <div class="heading">
+      <div class="heading__eyebrow">
+        Historical sources &amp; research notes
+      </div>
+
+      <h1 class="heading__title">
+        Nara temple &amp; urban geography
+      </h1>
+
+      <div class="heading__jp">
+        奈良寺院・地誌資料
+      </div>
+
+      <div class="heading__fi">
+        tutkimusmuistiinpanot — archival reconstruction of Hayashikōji and the Kawamura family context
+      </div>
+    </div>
+
+    <span class="ornament"></span>
+
+    <p class="lede">
+      These materials form the core documentary basis for reconstructing the
+      historical religious and urban environment surrounding the Kawamura
+      family at Hayashikōji, in central Nara. The line of inquiry has shifted
+      from surname-based genealogy toward the wider question of how the
+      neighbourhood itself was organised — its temples, its blocks, its
+      cemeteries — and how a family of the Kawamura's standing would have
+      been embedded in that fabric.
+    </p>
+
+    <h2 class="section">
+      Core sources
+      <span class="jp">主要資料</span>
+    </h2>
+
+    <div class="archive-table-wrap">
+
+      <table class="archive-table">
+
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Information</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>Primary catalog</td>
+            <td>
+              <a href="https://opacsvr01.library.pref.nara.jp/opac/search" target="_blank" rel="noopener">
+                奈良県立図書情報館 OPAC検索
+              </a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Institution</td>
+            <td>
+              <span class="source-title">奈良県立図書情報館</span>
+              <span class="source-sub">
+                Nara Prefectural Library &amp; Information Center
+              </span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Main use</td>
+            <td>
+              Catalog used to identify historical Nara sources related to
+              Hayashikōji, temples, maps, and urban geography.
+            </td>
+          </tr>
+
+          <tr>
+            <td>Major source found</td>
+            <td>
+              <span class="source-title">奈良市寺院明細帳</span>
+              <span class="source-sub">
+                Meiji-era temple registry survey
+              </span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Temple registry period</td>
+            <td>Meiji 24–27 (1891–1894)</td>
+          </tr>
+
+          <tr>
+            <td>Temple registry purpose</td>
+            <td>
+              Official survey of Nara-area temples including:
+              本尊, 由緒, land/property, buildings, and artifacts.
+            </td>
+          </tr>
+
+          <tr>
+            <td>Key temple entries</td>
+            <td>
+              <ul>
+                <li>林小路妙善寺 (p.026)</li>
+                <li>林小路霊厳寺 (p.027)</li>
+                <li>林小路円証寺 (p.028)</li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Historical importance</td>
+            <td>
+              Confirms Hayashikōji functioned as a distinct
+              temple-centered urban district.
+            </td>
+          </tr>
+
+          <tr>
+            <td>Strongest temple candidates</td>
+            <td>
+              円証寺 and 霊厳寺 / modern 霊巌院
+            </td>
+          </tr>
+
+          <tr>
+            <td>Major Edo source</td>
+            <td>
+              <span class="source-title">奈良坊目拙解</span>
+              <span class="source-sub">
+                Edo-period topographical gazetteer
+              </span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Original date</td>
+            <td>1735 (享保20年)</td>
+          </tr>
+
+          <tr>
+            <td>Author</td>
+            <td>
+              村井古道 (1681–1749)
+            </td>
+          </tr>
+
+          <tr>
+            <td>Modern edition</td>
+            <td>
+              1977 annotated and transcribed edition.
+            </td>
+          </tr>
+
+          <tr>
+            <td>Important feature</td>
+            <td>
+              Includes a historical map appendix.
+            </td>
+          </tr>
+
+          <tr>
+            <td>Most important historical map</td>
+            <td>
+              奈良名勝案内市圖 (1915)
+            </td>
+          </tr>
+
+          <tr>
+            <td>Key map discovery</td>
+            <td>
+              圓証寺 appears directly within the Hayashikōji block.
+            </td>
+          </tr>
+
+          <tr>
+            <td>Other important maps</td>
+            <td>
+              <ul>
+                <li>和州奈良之繪圖 (1864)</li>
+                <li>奈良市全圖 (1911)</li>
+                <li>大日本管轄分地圖 (1902)</li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Research focus shift</td>
+            <td>
+              From surname-based genealogy toward reconstruction of
+              Hayashikōji religious and urban geography.
+            </td>
+          </tr>
+
+          <tr>
+            <td>Main hypothesis</td>
+            <td>
+              The Kawamura family likely maintained affiliation with one
+              of the Hayashikōji temple institutions.
+            </td>
+          </tr>
+
+          <tr>
+            <td>Highest-priority next step</td>
+            <td>
+              Obtain 寺院明細帳 pages:
+              p.027–028 (霊厳寺 / 円証寺)
+            </td>
+          </tr>
+
+          <tr>
+            <td>Important terms to inspect</td>
+            <td>
+              墓地, 檀家, 境内地, 門徒, 末寺, 由緒
+            </td>
+          </tr>
+
+          <tr>
+            <td>Secondary research goal</td>
+            <td>
+              Compare Edo/Meiji maps with modern geography to approximate
+              林小路七番地 and nearby temple/cemetery continuity.
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+
+    <hr class="rule">
+
+    <div class="note">
+      <strong>Research note</strong>
+      Current evidence increasingly suggests that Hayashikōji maintained
+      unusually stable temple continuity from the Edo period into the modern era,
+      improving the likelihood that mortuary or danka records may survive.
+    </div>
+
+  </main>
+
+  <footer class="colophon">
+    <a href="about.html" style="color: inherit; border-bottom: none; font-style: italic;">→ About the documents</a>
+  </footer>
+
+</body>
+</html>
