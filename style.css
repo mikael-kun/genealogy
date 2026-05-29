@@ -1,39 +1,38 @@
 /* ============================================================
-   Kawamura / Uratani Family Archive
-   Quiet archival aesthetic — Finnish modernism meets Japanese paper
+   Kawamura / Uratani Family Archive — Bold Redesign
+   Nara wine red editorial aesthetic
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@300;400;500&display=swap');
 
 :root {
-  --paper:        #F4EFE4;
-  --paper-warm:   #EBE3D2;
-  --ink:          #1B1814;
-  --ink-soft:     #3F3A33;
-  --ink-mute:     #7A6F5E;
-  --hairline:     #C7BDA6;
-  --seal:         #993323;
-  --seal-faded:   #B85540;
-  --indigo:       #2D3E54;
+  --paper:        #F9F5EB;
+  --paper-accent: #FAFAF8;
+  --ink:          #0F0D0A;
+  --ink-soft:     #2A2420;
+  --ink-mute:     #564A42;
+  --hairline:     #D4CCBE;
+  --nara-red:     #5B1C1F;
+  --nara-red-fade: #8B4347;
 
   --serif-display: 'Cormorant Garamond', Georgia, serif;
   --serif-body:    'EB Garamond', Georgia, serif;
   --serif-jp:      'Noto Serif JP', 'EB Garamond', serif;
 
-  --measure:       640px;
-  --measure-wide:  860px;
+  --measure:       720px;
+  --measure-wide:  920px;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { font-size: 18px; }
+html { font-size: 22px; }
 
 body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--serif-body);
   font-weight: 400;
-  line-height: 1.55;
+  line-height: 1.72;
   font-feature-settings: "onum", "kern", "liga";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,8 +40,8 @@ body {
 
   /* Subtle paper texture via layered gradients */
   background-image:
-    radial-gradient(circle at 20% 30%, rgba(155,135,95,0.04) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(155,135,95,0.03) 0%, transparent 50%);
+    radial-gradient(circle at 20% 30%, rgba(91,28,31,0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(91,28,31,0.025) 0%, transparent 50%);
 }
 
 /* ─── Layout ────────────────────────────────────────────────── */
@@ -50,7 +49,7 @@ body {
 .page {
   max-width: var(--measure);
   margin: 0 auto;
-  padding: 4rem 1.5rem 6rem;
+  padding: 5rem 2rem 8rem;
 }
 
 .page--wide {
@@ -62,21 +61,21 @@ body {
 .masthead {
   max-width: 980px;
   margin: 0 auto;
-  padding: 1.5rem 1.5rem 0;
+  padding: 2rem 2rem 0;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  border-bottom: 1px solid var(--hairline);
-  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--nara-red);
+  padding-bottom: 1.5rem;
 }
 
 .masthead__title {
   font-family: var(--serif-display);
-  font-weight: 500;
+  font-weight: 600;
   font-style: italic;
-  font-size: 1.02rem;
-  letter-spacing: 0.02em;
-  color: var(--ink-soft);
+  font-size: 1.25rem;
+  letter-spacing: 0.01em;
+  color: var(--nara-red);
   white-space: nowrap;
 }
 
@@ -87,129 +86,134 @@ body {
 
 .masthead__nav {
   font-family: var(--serif-body);
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
   white-space: nowrap;
 }
 
 .masthead__nav a {
   color: var(--ink-mute);
   text-decoration: none;
-  margin-left: 1.05rem;
+  margin-left: 1.4rem;
   transition: color 0.2s ease;
 }
 
 .masthead__nav a:hover,
 .masthead__nav a[aria-current="page"] {
-  color: var(--seal);
+  color: var(--nara-red);
+  font-weight: 500;
 }
 
 /* ─── Page heading ─────────────────────────────────────────── */
 
 .heading {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   text-align: center;
   position: relative;
 }
 
 .heading__eyebrow {
   font-family: var(--serif-body);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-style: italic;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--ink-mute);
-  margin-bottom: 0.5rem;
+  color: var(--nara-red);
+  margin-bottom: 1rem;
+  font-weight: 500;
 }
 
 .heading__title {
   font-family: var(--serif-display);
   font-weight: 400;
-  font-size: 3.2rem;
+  font-size: 4.2rem;
   line-height: 1.05;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.6rem;
+  letter-spacing: -0.015em;
+  margin-bottom: 1rem;
+  color: var(--ink);
 }
 
 .heading__title em {
   font-style: italic;
-  color: var(--seal);
+  color: var(--nara-red);
 }
 
 .heading__jp {
   font-family: var(--serif-jp);
   font-weight: 300;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   color: var(--ink-soft);
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
 }
 
 .heading__fi {
   font-family: var(--serif-display);
   font-style: italic;
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--ink-mute);
-  margin-top: 0.3rem;
+  margin-top: 0.5rem;
 }
 
-/* ─── Hanko ornament (red circle, echoes the seal stamps) ──── */
+/* ─── Hanko ornament (wine red circle) ──── */
 
 .ornament {
   display: block;
-  margin: 2.5rem auto;
-  width: 14px;
-  height: 14px;
+  margin: 3.5rem auto;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background: var(--seal);
-  opacity: 0.7;
+  background: var(--nara-red);
+  opacity: 0.85;
 }
 
 .rule {
   border: 0;
-  border-top: 1px solid var(--hairline);
-  margin: 3rem auto;
-  max-width: 120px;
+  border-top: 2px solid var(--nara-red);
+  margin: 4rem auto;
+  max-width: 140px;
+  opacity: 0.6;
 }
 
 /* ─── Prose ─────────────────────────────────────────────────── */
 
 p {
-  margin-bottom: 1.2rem;
-  font-size: 1.02rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
 }
 
 p.lede {
-  font-size: 1.18rem;
-  line-height: 1.5;
+  font-size: 1.28rem;
+  line-height: 1.65;
   color: var(--ink-soft);
   font-style: italic;
   font-family: var(--serif-display);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 p.lede::first-letter {
-  font-size: 3.2rem;
+  font-size: 4.2rem;
   font-weight: 500;
   float: left;
   line-height: 0.85;
-  padding: 0.2rem 0.5rem 0 0;
-  color: var(--seal);
+  padding: 0.1rem 0.6rem 0 0;
+  color: var(--nara-red);
   font-style: normal;
 }
 
 a {
-  color: var(--seal);
+  color: var(--nara-red);
   text-decoration: none;
-  border-bottom: 1px solid rgba(153, 51, 35, 0.3);
-  transition: border-color 0.2s ease;
+  border-bottom: 1.5px solid rgba(91, 28, 31, 0.25);
+  transition: all 0.2s ease;
 }
 
 a:hover {
-  border-bottom-color: var(--seal);
+  border-bottom-color: var(--nara-red);
+  color: var(--ink);
 }
 
 em { font-style: italic; }
-strong { font-weight: 500; color: var(--ink); }
+strong { font-weight: 600; color: var(--ink); }
 
 .jp {
   font-family: var(--serif-jp);
@@ -225,35 +229,38 @@ strong { font-weight: 500; color: var(--ink); }
 
 h2.section {
   font-family: var(--serif-display);
-  font-weight: 400;
-  font-size: 1.8rem;
-  margin: 3rem 0 1.2rem;
-  letter-spacing: 0.01em;
-  border-bottom: 1px solid var(--hairline);
-  padding-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 2.2rem;
+  margin: 4rem 0 1.5rem;
+  letter-spacing: -0.005em;
+  border-bottom: 2px solid var(--nara-red);
+  padding-bottom: 0.8rem;
+  color: var(--ink);
 }
 
 h2.section .jp {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--ink-mute);
-  margin-left: 0.8rem;
+  margin-left: 1rem;
+  font-weight: 400;
 }
 
 h3.subsection {
   font-family: var(--serif-display);
   font-weight: 500;
   font-style: italic;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: var(--ink-soft);
-  margin: 2rem 0 0.8rem;
+  margin: 2.5rem 0 1rem;
 }
 
 /* ─── Person entry (used on family pages) ──────────────────── */
 
 .person {
-  margin: 2.5rem 0;
-  padding: 1.5rem 0;
-  border-top: 1px solid var(--hairline);
+  margin: 3rem 0;
+  padding: 2rem;
+  background: var(--paper-accent);
+  border-left: 4px solid var(--nara-red);
 }
 
 .person:first-of-type {
@@ -262,90 +269,101 @@ h3.subsection {
 
 .person__name {
   font-family: var(--serif-display);
-  font-weight: 500;
-  font-size: 1.55rem;
-  margin-bottom: 0.3rem;
-  letter-spacing: -0.005em;
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.008em;
+  color: var(--ink);
 }
 
 .person__name .jp {
-  font-weight: 400;
+  font-weight: 500;
   color: var(--ink-soft);
-  margin-right: 0.6rem;
+  margin-right: 0.8rem;
 }
 
 .person__romaji {
   font-style: italic;
-  color: var(--ink-mute);
-  font-weight: 400;
-  font-size: 1.1rem;
+  color: var(--nara-red);
+  font-weight: 500;
+  font-size: 1.15rem;
 }
 
 .person__meta {
   font-family: var(--serif-body);
   font-size: 0.88rem;
   color: var(--ink-mute);
-  letter-spacing: 0.04em;
-  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.2rem;
   font-style: italic;
 }
 
 .person__meta .sep {
   display: inline-block;
-  margin: 0 0.6rem;
+  margin: 0 0.8rem;
   color: var(--hairline);
 }
 
 .person__bio p {
-  font-size: 1rem;
+  font-size: 1.02rem;
 }
 
 .person__status {
   display: inline-block;
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--ink-mute);
-  border: 1px solid var(--hairline);
-  padding: 2px 8px;
+  color: var(--nara-red);
+  border: 1.5px solid var(--nara-red);
+  padding: 4px 10px;
   border-radius: 2px;
-  margin-left: 0.5rem;
-  vertical-align: 0.2em;
+  margin-left: 0.8rem;
+  vertical-align: 0.15em;
   font-style: normal;
+  font-weight: 500;
 }
 
 /* ─── Place entry ──────────────────────────────────────────── */
 
 .place {
-  margin: 3rem 0;
+  margin: 3.5rem 0;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.place:last-of-type {
+  border-bottom: none;
 }
 
 .place__name {
   font-family: var(--serif-display);
-  font-weight: 400;
-  font-size: 1.6rem;
-  margin-bottom: 0.2rem;
+  font-weight: 500;
+  font-size: 1.85rem;
+  margin-bottom: 0.3rem;
+  color: var(--ink);
 }
 
 .place__jp {
   font-family: var(--serif-jp);
-  font-size: 1.05rem;
-  color: var(--ink-soft);
-  margin-bottom: 0.8rem;
+  font-size: 1.12rem;
+  color: var(--nara-red);
+  margin-bottom: 1rem;
   display: block;
+  font-weight: 400;
 }
 
 .place__now {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   font-style: italic;
   color: var(--ink-mute);
-  margin-bottom: 1rem;
+  margin-bottom: 1.3rem;
+  font-weight: 500;
 }
 
 /* ─── Family tree (SVG container) ──────────────────────────── */
 
 .tree-container {
-  margin: 3rem 0;
+  margin: 4rem 0;
   text-align: center;
   overflow-x: auto;
 }
@@ -356,95 +374,115 @@ h3.subsection {
 }
 
 .tree-caption {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-style: italic;
   color: var(--ink-mute);
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 /* ─── Footnotes / metadata blocks ──────────────────────────── */
 
 .note {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--ink-soft);
   font-style: italic;
-  border-left: 2px solid var(--hairline);
-  padding-left: 1rem;
-  margin: 1.5rem 0;
+  border-left: 4px solid var(--nara-red);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  background: var(--paper-accent);
+  padding: 1.5rem;
+  padding-left: 1.5rem;
+  border-radius: 2px;
 }
 
 .note strong {
   font-style: normal;
-  letter-spacing: 0.04em;
-  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  color: var(--ink-mute);
+  color: var(--nara-red);
   display: block;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
-/* ─── Footer ──────────────────────────────────────────────── */
+/* ─── Footer ──────────────────────────────────────────── */
 
 .colophon {
   max-width: var(--measure);
-  margin: 4rem auto 2rem;
-  padding: 2rem 1.5rem;
-  border-top: 1px solid var(--hairline);
+  margin: 6rem auto 2rem;
+  padding: 2.5rem 2rem;
+  border-top: 2px solid var(--nara-red);
   text-align: center;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-style: italic;
   color: var(--ink-mute);
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 /* ─── Inline alliance / structural notes ─────────────────── */
 
 .alliance-note {
-  background: var(--paper-warm);
-  padding: 1.5rem 1.8rem;
-  margin: 2rem 0;
-  border-left: 3px solid var(--seal);
-  font-size: 0.95rem;
+  background: var(--paper-accent);
+  padding: 2rem;
+  margin: 2.5rem 0;
+  border-left: 4px solid var(--nara-red);
+  font-size: 0.98rem;
 }
 
 .alliance-note__label {
   font-family: var(--serif-body);
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--seal);
-  margin-bottom: 0.5rem;
+  color: var(--nara-red);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
 }
 
 /* ─── Three-language name block (for grandparents etc.) ────── */
 
 .name-block {
-  margin: 1.5rem 0;
+  margin: 2rem 0;
   font-family: var(--serif-display);
+  padding: 1.5rem;
+  background: var(--paper-accent);
+  border-left: 4px solid var(--nara-red);
 }
 
 .name-block__primary {
-  font-size: 1.55rem;
-  font-weight: 500;
-  letter-spacing: -0.005em;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.008em;
+  color: var(--ink);
 }
 
 .name-block__variants {
-  font-size: 0.95rem;
-  color: var(--ink-mute);
+  font-size: 1rem;
+  color: var(--nara-red);
   font-style: italic;
-  margin-top: 0.2rem;
+  margin-top: 0.4rem;
   font-family: var(--serif-body);
+  font-weight: 500;
 }
 
 /* ─── Responsive ──────────────────────────────────────────── */
 
-@media (max-width: 600px) {
-  html { font-size: 16px; }
-  .page { padding: 2.5rem 1.25rem 4rem; }
-  .heading__title { font-size: 2.4rem; }
-  .masthead { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
-  .masthead__nav a { margin-left: 0; margin-right: 1rem; }
-  .person__name { font-size: 1.35rem; }
+@media (max-width: 700px) {
+  html { font-size: 19px; }
+  .page { padding: 3rem 1.25rem 5rem; }
+  .heading__title { font-size: 2.8rem; }
+  .masthead { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 1.5rem 1.25rem 0; }
+  .masthead__nav { margin-top: 0.5rem; }
+  .masthead__nav a { margin-left: 0; margin-right: 1.2rem; }
+  .person__name { font-size: 1.5rem; }
+  h2.section { font-size: 1.85rem; }
+  .place__name { font-size: 1.55rem; }
+}
+
+@media (max-width: 480px) {
+  html { font-size: 18px; }
+  .heading__title { font-size: 2.2rem; }
+  .page { padding: 2.5rem 1rem 4rem; }
 }
