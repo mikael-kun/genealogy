@@ -63,25 +63,27 @@ body {
   margin: 0 auto;
   padding: 2rem 2rem 0;
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2.5rem;
   border-bottom: 2px solid var(--nara-red);
   padding-bottom: 1.5rem;
 }
 
 .masthead__title {
-  font-family: var(--serif-display);
-  font-weight: 600;
-  font-style: italic;
-  font-size: 1.25rem;
-  letter-spacing: 0.01em;
+  font-size: 1.8rem;
   color: var(--nara-red);
-  white-space: nowrap;
+  line-height: 1;
+  flex-shrink: 0;
 }
 
 .masthead__title a {
   color: inherit;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: none;
 }
 
 .masthead__nav {
@@ -96,6 +98,7 @@ body {
   text-decoration: none;
   margin-left: 1.4rem;
   transition: color 0.2s ease;
+  border-bottom: none;
 }
 
 .masthead__nav a:hover,
